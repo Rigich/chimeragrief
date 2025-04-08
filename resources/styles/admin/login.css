@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    background: linear-gradient(30deg, #CD346D 0%, #B52BC4 100%);
+    background-blend-mode: lighten;
+}
+
+button {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    outline: unset;
+}
+
+.background {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: background .2s infinite;
+    opacity: .9;
+    visibility: visible;
+    z-index: 1;
+}
+
+@keyframes background {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.auth {
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.70);
+    padding: 50px 90px 90px;
+    box-shadow: 0px 0px 100px -4px rgba(255, 255, 255, 0.3);
+
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: rgb(29, 0, 23);
+}
+.message {
+    background-color: rgb(255, 117, 117);
+    padding: 10px;
+    border-radius: 10px;
+    color: #000;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.component {
+    margin-bottom: 15px;
+}
+.text {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: rgb(27, 17, 0);
+}
+.input {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    outline: unset;
+
+    color: #000;
+    padding: 7px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: inherit;
+    
+    transition: background-color .3s ease;
+}
+
+.input:focus {
+    background-color: #ffe1fb;
+}
+.send {
+    margin-top: 30px;
+    width: 100%;
+
+    background: #F17916;
+    transition: background-color .3s cubic-bezier(0.4, 0, 1, 1);
+
+    font-weight: 700;
+    font-size: 24px;
+    padding: 10px 0;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.send:hover {
+    background-color: #ffe1fb;
+}

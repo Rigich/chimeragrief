@@ -1,0 +1,39 @@
+.switch {
+    width: 50px;
+    margin: 10px 0;
+}
+
+.switch label {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    background: #4a4a4a;
+    border-radius: 36px;
+}    
+
+.switch label input[type="checkbox"] {
+    visibility: hidden;
+}
+
+.switch label input[type="checkbox"]::before {
+    visibility: visible;
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    transition: all 0.3s ease;
+}
+
+.switch label input[type="checkbox"]:checked::before {
+    background: #77BE7D;
+    left: 25px;
+}
+
+.switch label input[type="checkbox"]:not(:checked)::before {
+    background: rgba(255,255,255,0.3);
+    left: 5px;
+}

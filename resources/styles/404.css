@@ -1,0 +1,16 @@
+.main {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.main__title {
+    color: rgb(141, 0, 0);
+    font-weight: 900;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.main__subtitle {
+    opacity: 0.9;
+    font-size: 24px;
+}

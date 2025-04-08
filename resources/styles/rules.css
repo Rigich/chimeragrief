@@ -1,0 +1,127 @@
+.rules {
+    padding-top: 50px;
+}
+
+.titlestyle-default {
+    /* text-align: center; */
+    display: block;
+    font-weight: 700;
+    font-size: 32px;
+    position: relative;
+}
+
+.titlestyle-default::before {
+    content: '';
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%) rotate(25deg);
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    background-image: url('../images/minecraft/redstone.png');
+    background-size: cover;
+    animation: titlestyle 4s ease-out infinite;
+    /* animation-delay: 1s; */
+}
+
+.titlestyle-default::after {
+    content: '';
+    position: absolute;
+    transform: translateX(50%) translateY(50%) rotate(25deg);
+    bottom: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    background-image: url('../images/minecraft/redstone.png');
+    background-size: cover;
+    animation: titlestyle2 4s ease-out infinite;
+    animation-delay: 2s;
+}
+
+.rules__title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+@keyframes titlestyle{
+    0%{
+        transform: translateX(-50%) translateY(-50%) rotate(25deg);
+    }
+    25%{
+        transform: translateX(-50%) translateY(-25%) rotate(-25deg);
+    }
+    80%{
+        transform: translateX(-50%) translateY(-25%) rotate(-25deg);
+    }
+    100%{
+        transform: translateX(-50%) translateY(-50%) rotate(25deg);
+    }
+}
+
+@keyframes titlestyle2{
+    0%{
+        transform: translateX(50%) translateY(50%) rotate(25deg);
+    }
+    25%{
+        transform: translateX(50%) translateY(25%) rotate(-25deg);
+    }
+    80%{
+        transform: translateX(50%) translateY(25%) rotate(-25deg);
+    }
+    100%{
+        transform: translateX(50%) translateY(50%) rotate(25deg);
+    }
+}
+
+.category__list {
+    margin-bottom: 80px;
+}
+.category__item {
+    margin-bottom: 10px;
+}
+.category__title {
+    padding: 15px 25px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+.category__item.active .category__title {
+    border-radius: 10px 10px 0 0;
+}
+.category__title:hover {
+    background-color: #eaeaea;
+}
+.rule__list {
+    background-color: #e9e9e9;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    display: none;
+}
+.category__item.active .rule__list {
+    display: block;
+}
+.rule__item {
+    padding: 10px 25px 10px 50px;
+    font-size: 18px;
+    cursor: pointer;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.badge-red {
+    padding: 3px 5px;
+    background-color: #ffb9b9;
+    border-radius: 5px;
+}
+
+.badge-green {
+    padding: 3px 5px;
+    background-color: #c2ffb9;
+    border-radius: 5px;
+}

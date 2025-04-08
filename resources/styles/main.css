@@ -1,0 +1,760 @@
+/* components - buttons*/ 
+.buttonstyle-default {
+    display: flex;
+    align-items: center;
+    padding: 6px 30px 6px 6px;
+    background-color: #fff;
+    border-radius: 10px;
+    color: #000;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.buttonstyle-default::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    /* border-radius: 10px; */
+    background-color: rgba(255, 0, 170, 0.1);
+    transition: height .3s ease;
+}
+.buttonstyle-default:hover::before {
+    height: 100%;
+}
+
+.buttonstyle-default .button-icon {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(173, 0, 255, 0.2);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+.buttonstyle-default .button-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform .3s ease;
+}
+.buttonstyle-default:hover .button-icon img {
+    transform: scale(1.5);
+}
+.buttonstyle-purplecolor {
+    background-color: #60005C;
+    color: #fff;
+}
+.buttonstyle-back {
+    background-color: #f2f2f2;
+    color: #000;
+}
+.buttonstyle-back .button-icon {
+    background-color: rgba(228, 228, 228, 0.2);
+}
+/* components - title*/ 
+.titlestyle-default {
+    /* text-align: center; */
+    display: block;
+    font-weight: 700;
+    font-size: 32px;
+    position: relative;
+}
+
+.titlestyle-default::before {
+    content: '';
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%) rotate(25deg);
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    background-image: url('../images/minecraft/diamond.png');
+    animation: titlestyle 4s ease-out infinite;
+    /* animation-delay: 1s; */
+}
+
+.titlestyle-default::after {
+    content: '';
+    position: absolute;
+    transform: translateX(50%) translateY(50%) rotate(25deg);
+    bottom: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    background-image: url('../images/minecraft/diamond.png');
+    animation: titlestyle2 4s ease-out infinite;
+    animation-delay: 2s;
+}
+
+@keyframes titlestyle{
+    0%{
+        transform: translateX(-50%) translateY(-50%) rotate(25deg);
+    }
+    25%{
+        transform: translateX(-50%) translateY(-25%) rotate(-25deg);
+    }
+    80%{
+        transform: translateX(-50%) translateY(-25%) rotate(-25deg);
+    }
+    100%{
+        transform: translateX(-50%) translateY(-50%) rotate(25deg);
+    }
+}
+
+@keyframes titlestyle2{
+    0%{
+        transform: translateX(50%) translateY(50%) rotate(25deg);
+    }
+    25%{
+        transform: translateX(50%) translateY(25%) rotate(-25deg);
+    }
+    80%{
+        transform: translateX(50%) translateY(25%) rotate(-25deg);
+    }
+    100%{
+        transform: translateX(50%) translateY(50%) rotate(25deg);
+    }
+}
+
+.titlestyle-donate {
+    display: flex;
+    align-items: center;
+}
+
+.titlestyle-donateicon {
+    margin-right: 6px;
+}
+
+.titlestyle-donatetext {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+/* content */
+.about {
+    background-color: rgba(255, 0, 229, 0.3);
+    animation: background 10s ease-out infinite;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    margin-bottom: 65px;
+}
+
+.about .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about__column {
+}
+.about__column:first-child {
+    margin-right: 80px;
+}
+.about__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+
+    margin-left: 20px;
+}
+.about__title-name {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 40px;
+    margin-right: 22px;
+    color: #fff;
+}
+.about__title-tagline {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 100%;
+    max-width: 150px;
+    color: #fff;
+    position: relative;
+}
+.about__title-tagline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #000;
+    border-radius: 2px;
+    left: -10px;
+    top: 0;
+}
+.about__description {
+    margin-bottom: 29px;
+    max-width: 470px;
+}
+.about__description-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000;
+}
+.about__buttons {
+    display: flex;
+}
+
+.about__button-play {
+    margin-right: 21px;
+}
+
+.about__book {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 295px;
+    height: 364px;
+    /* width: 100%;
+    height: 100%; */
+    position: relative;
+    padding: 26.5px 30px 47px 30px;
+}
+.about__text {
+    font-family: 'Minecraft', sans-serif;
+    font-size: 13px;
+    line-height: 24.5px;
+}
+.about__online {
+    padding: 6px 30px 6px 10px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) translateY(50%);
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.about__online-dots {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px; 
+    position: relative;
+}
+.about__online-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 10px;
+    width: 10px;
+    background-color: rgb(0, 255, 10);
+    border-radius: 50%;
+    opacity: 1;
+}
+.about__online-dot:first-child {
+    height: 20px;
+    width: 20px;
+    background-color: rgb(0, 255, 10, .3);
+    animation: pulse 2s ease-out infinite;
+}
+.about__online-dot:last-child {
+    height: 30px;
+    width: 30px;
+    background-color: rgb(0, 255, 10, .3);
+    animation: pulse 2s ease-out infinite;
+    animation-delay: 1s;
+}
+.about__online-text {
+    display: flex;
+    font-weight: 500;
+    font-size: 18px;
+    color: #000;
+}
+.about__online-value {
+    margin-left: 5px;
+    color: #880E66;
+}
+
+@keyframes pulse{
+    0%{
+        height: 10px;
+        width: 10px;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        height: 30px;
+        width: 30px;
+    }
+}
+
+.donate {
+    margin-bottom: 105px;
+}
+
+.donate__title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.donate__control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.donate__subtitle {
+}
+
+.donate__control-back {
+    padding: 10px 30px 10px 6px;
+    margin-right: 10px;
+}
+
+.donate__cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.donate__item {
+    background-color: #A6005A;
+    box-shadow: inset -5px -5px 0px 5px #39003A, inset 4px 4px 0px #39003A;
+    transition: box-shadow .3s ease, background-color .3s ease;
+    min-height: 299px;
+    max-height: 300px;
+    margin: 10px;
+    flex: 1 1 318px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.donate__item * {
+    pointer-events: none;
+}
+
+.donate__item-product {
+    min-height: 200px;
+    max-height: 300px;
+    flex: 1 1 200px;
+}
+
+.donate__item:hover {
+    box-shadow: inset -4px -4px 0px 0 #39003A, inset 5px 5px 0px 5px #39003A;
+    background-color: #c7006e;
+}
+
+.donate__item-background {
+    max-width: 75%;
+    max-height: 75%;
+    opacity: .7;
+    transform: scale(1);
+    transition: opacity .3s ease, transform .3s ease;
+}
+
+.donate__item:hover .donate__item-background {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.donate__item-name {
+    position: absolute;
+    color: #fff;
+    font-weight: 600;
+    font-size: 24px;
+    bottom: 25px;
+    right: 25px;
+    text-shadow: 1px 1px 30px #000;
+}
+
+.donate__item-product .donate__item-name {
+    font-size: 20px;
+    left: 25px;
+    margin-right: 60px;
+}
+
+.donate__item-product .donate__item-price {
+    position: absolute;
+    color: #fff;
+    font-weight: 600;
+    font-size: 24px;
+    bottom: 25px;
+    right: 25px;
+    text-shadow: 1px 1px 30px #000;
+}
+
+.last {
+    margin-bottom: 100px;
+}
+
+.last__title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.last__title-text::before {
+    background-image: url('../images/minecraft/knowledge_book.png');
+}
+
+.last__title-text::after {
+    background-image: url('../images/minecraft/knowledge_book.png');
+}
+
+.last__title-notbuys {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.last__title-notbuys::before {
+    background-image: none;
+}
+
+.last__title-notbuys::after {
+    background-image: none;
+}
+
+.last__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.last__item {
+    background-image: url('../images/minecraft/map.png');
+    width: 165px;
+    height: 165px;
+    margin: 19px;
+    position: relative;
+    display: flex;
+    padding-top: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.last__item-image {
+    width: 130px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    opacity: .8;
+}
+
+.last__item-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.last__item-name {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.last__item-date {
+    font-size: 14px;
+}
+
+/* form */
+.donate__form {
+    padding-top: 30px;
+}
+
+.donate__form-info {
+    margin-bottom: 60px;
+
+    display: flex;
+    /* align-items: center; */
+
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.donate__item-form {
+    min-width: 240px;
+    height: 215px;
+    margin-right: 50px;
+    min-height: max-content;
+    flex: 0 1 300px;
+}
+
+.donate__form-pay {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.donate__form-user {
+    margin-right: 20px;
+    position: relative;
+    padding: 0 15px;
+}
+
+.donate__form-user::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: height .3s ease;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.16);
+}
+
+.donate__form-pay.pay .donate__form-user::before {
+    height: 100%;
+}
+
+.donate__form-text {
+    font-family: 'Minecraft', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.donate__form-input {
+    margin-bottom: 10px;
+    background-image: url('../images/minecraft/form.png');
+    background-size: 410px 59px;
+    width: 410px;
+    height: 59px;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+
+    /* text */ 
+    color: #fff;
+    font-family: 'Minecraft', sans-serif;
+    font-size: 20px;
+}
+
+.donate__form-ways {
+    width: 100%;
+    position: relative;
+}
+
+.donate__form-ways::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: height .3s ease;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.16);
+}
+
+.donate__form-pay.pay .donate__form-ways::before {
+    height: 0;
+}
+
+.donate__ways-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.donate__form-way {
+    height: 100px;
+    background-color: #f2f2f2;
+    flex: 1 1 150px;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.donate__form-way img {
+    max-width: 135px;
+    max-height: 80px;
+}
+
+.donate__form-way label {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.donate__form-check {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.donate__form-way label:active, .donate__form-way .donate__form-check:checked + label {
+    border: 3px solid rgb(255, 157, 0);
+}
+
+.donate__form-buttons {
+    display: flex;
+}
+
+.donate__form-button {
+    padding: 10px 40px 10px 30px;
+    background-color: #ff85e9;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+    transition: background-color .3s ease, margin-left .4s ease-out, transform .4s ease-out;
+    position: relative;
+    cursor: pointer;
+}
+
+.donate__form-price {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 0 30px;
+    transform: translateX(-100%);
+    background-color: #f2f2f2;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 600;
+    font-size: 18px;
+    color: #000;
+
+    border-radius: 5px 0 0 5px;
+    display: none;
+
+    white-space: nowrap;
+}
+
+.donate__form-pricevalue {
+    margin-left: 5px;
+    color: #310025;
+}
+
+.donate__form-buttons.pay {
+    justify-content: space-between;
+}
+
+.donate__form-buttons.pay .donate__form-button {
+    border-radius: 0 5px 5px 0;
+}
+
+.donate__form-buttons.pay .donate__form-price {
+    display: flex;
+}
+
+.donate__form-btntext {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #200513;
+}
+
+.donate__form-btnimage {
+    margin-left: 20px;
+    width: 25px;
+    height: 25px;
+    transform: scale(1);
+    transition: transform .3s ease;
+}
+
+.donate__form-button:hover {
+    background-color: #ffa3ee;
+}
+
+.donate__form-button:hover .donate__form-btnimage{
+    transform: scale(1.2);
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 870px) {
+    .donate__form-pay {
+        flex-direction: column;
+        align-items: center;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+    }
+
+    .donate__form-way {
+        background-color: #e6e6e6;
+    }
+
+    .donate__form-user {
+        display: block;
+        margin-right: 0;
+    }
+
+    .donate__form-ways {
+        display: none;
+    }
+
+    .donate__form-pay.pay .donate__form-user {
+        display: none;
+    }
+
+    .donate__form-pay.pay .donate__form-ways {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .donate__form-info {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .donate__item-form {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+  .about .container {
+    flex-direction: column;
+  }
+
+  .about__column:first-child {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+    .donate__form-buttons {
+        flex-direction: column;
+    }
+
+    .donate__form-back {
+        margin-bottom: 8px;
+    }
+
+    .donate__form-price {
+        margin: 0 15px;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%) translateY(100%);
+        border-radius: 0 0 5px 5px;
+    }
+
+    .donate__form-buttons.pay .donate__form-button {
+        margin-left: 0;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .donate__form-pay {
+        align-items: flex-start;
+        overflow-x: scroll;
+    }
+}
